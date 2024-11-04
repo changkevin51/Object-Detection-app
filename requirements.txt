@@ -7,3 +7,4 @@ opencv-python
 streamlit
 ttf-opensans
 opencv-python-headless
+opencv-contrib-python
