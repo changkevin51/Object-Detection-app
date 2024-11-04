@@ -92,8 +92,8 @@ if st.sidebar.button('Reset'):
 uploaded_file = st.file_uploader("Choose an image or video...", type=["jpg", "png", "mp4"])
 
 # Try an example button
-example_image_path = "C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\preview16.jpg"
-example_video_converted = 'C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\example_video_converted.mp4'
+example_image_path = "preview16.jpg"
+example_video_converted = 'example_video_converted.mp4'
 
 # Function to load example files as BytesIO objects
 def load_example_as_bytesio(file_path):
@@ -146,21 +146,21 @@ if st.session_state.try_example:
     # Show videos based on the button clicked
     if st.session_state.play_video:
         st.write("Example video:")
-        st.video("C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\example_video.mp4")
+        st.video("example_video.mp4")
         st.write("")
         st.write("Example video detected:")
-        st.video("C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\example_video_converted.mp4")
+        st.video("example_video_converted.mp4")
         reset_all_states()
 
     if st.session_state.run_detection:
-        st.video("C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\example_video.mp4")
+        st.video("example_video.mp4")
         st.write("Processing video with object detection...")
-        video_path = "C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\example_video.mp4"
-        output_path = "C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\detected_video.mp4"
+        video_path = "example_video.mp4"
+        output_path = "detected_video.mp4"
 
         detect_video(video_path, output_path, obj_thresh=st.session_state['obj_thresh'], nms_thresh=st.session_state['nms_thresh'])
 
-        output_path1 = "C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\detected_video1.mp4"
+        output_path1 = "detected_video1.mp4"
         command = f"ffmpeg -y -i {output_path} -vcodec libx264 {output_path1}"
         subprocess.call(command, shell=True)
         st.toast('🎉 Done!', icon='✅')
@@ -217,16 +217,16 @@ if uploaded_file is not None:
     elif file_extension in ["mp4"]:
         with open("video.mp4", "wb") as f:
             f.write(uploaded_file.read())
-        example_video = "C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\video1.mp4"
+        example_video = "video1.mp4"
         if uploaded_file != example_video:
-            video_path = "C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\video.mp4"
+            video_path = "video.mp4"
         st.write("Uploaded video:")
         st.video(uploaded_file)
-        output_path = "C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\detected_video.mp4"
+        output_path = "detected_video.mp4"
 
         detect_video(video_path, output_path, obj_thresh=st.session_state['obj_thresh'], nms_thresh=st.session_state['nms_thresh'])
 
-        output_path1 = "C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\detected_video1.mp4"
+        output_path1 = "detected_video1.mp4"
         command = f"ffmpeg -y -i {output_path} -vcodec libx264 {output_path1}"
         subprocess.call(command, shell=True)
         st.toast('🎉 Done!', icon='✅')
@@ -247,5 +247,3 @@ for i in range(7):
 st.markdown('<div class="footer">This app uses YOLOv3 to detect objects in images and videos</div>', unsafe_allow_html=True)
 st.write("")
 st.markdown('<div class="footer">A project by Kevin Chang</div>', unsafe_allow_html=True)
-# except Exception as e:
-#     st.error("This file is not supported. Please try a different one.")
