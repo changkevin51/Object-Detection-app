@@ -17,8 +17,7 @@ import time
 
 anchors = [[[116,90], [156,198], [373,326]], [[30,61], [62,45], [59,119]], [[10,13], [16,30], [33,23]]]
 
-DATA_ROOT = 'C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\'
-
+DATA_ROOT = './'
 
 model_path = os.path.join(DATA_ROOT, 'yolo.h5')
 
@@ -235,7 +234,7 @@ def draw_boxes(image_, boxes, labels):
     
     # Load the new font (Open Sans ExtraBold)
     try:
-        font_path = "C:\\Users\\chang\\Documents\\Python_Projects\\Object_Detection\\.conda\\fonts\\open-fonts\\OpenSans-SemiBold.ttf"
+        font_path = "C:\\Users\chang\\Documents\\Python_Projects\\Object_Detection\\.conda\\fonts\\open-fonts\\OpenSans-SemiBold.ttf"
         font = ImageFont.truetype(font=font_path, size=np.floor(3e-2 * image_h + 0.5).astype('int32'))
     except IOError:
         print("Font not found. Using default font.")
