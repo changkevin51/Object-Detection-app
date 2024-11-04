@@ -6,3 +6,4 @@ keras
 opencv-python
 streamlit
 ttf-opensans
+opencv-python-headless
