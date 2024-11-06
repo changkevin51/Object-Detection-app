@@ -1,0 +1,9 @@
+streamlit
+tensorflow
+matplotlib
+Pillow
+numpy
+keras
+streamlit
+ttf-opensans
+opencv-python-headless
