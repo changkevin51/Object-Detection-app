@@ -22,7 +22,7 @@ To run this project, make sure to install the required dependencies:
 pip install -r requirements.txt
 ```
 
-## Results
+## Examples
 
 ### Sample output for image
 
