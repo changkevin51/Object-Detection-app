@@ -4,7 +4,7 @@ An object detection app tailored towards transportation. Accepts images and vide
 
 DEMO LINK: https://8504-01j6t863nm5gjsvgy63e2avctp.cloudspaces.litng.ai 
 
-Note: The demo above may take up to 5 minutes to start (Used lightning.ai because Git LFS limit exceeded)
+NOTE: THE DEMO ABOVE MAY TAKE UP TO 5 MINUTES TO START (Used lightning.ai because Git LFS limit exceeded)
 
 
 
