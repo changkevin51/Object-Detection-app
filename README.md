@@ -21,6 +21,11 @@ To run this project, clone the repository. Make sure to install the required dep
 ```bash
 pip install -r requirements.txt
 ```
+Run the application using Streamlit:
+
+```bash
+streamlit run app.py
+```
 
 ## Examples
 
