@@ -16,7 +16,7 @@ Object detection is essential for computer vision applications, and this model c
 
 ## Installation
 
-To run this project, make sure to install the required dependencies:
+To run this project, clone the repository. Make sure to install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
