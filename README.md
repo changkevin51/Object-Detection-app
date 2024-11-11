@@ -1,6 +1,6 @@
 # Object Detection Project
 
-An object detection app tailored towards transportation. Accepts images and videos.
+A Streamlit object detection app tailored towards transportation. Accepts images and videos.
 
 DEMO LINK: https://8504-01j6t863nm5gjsvgy63e2avctp.cloudspaces.litng.ai 
 
